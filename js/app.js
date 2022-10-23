@@ -26,6 +26,14 @@ window.addEventListener("DOMContentLoaded", () => {
         .getElementById("theme-toggle")
         .addEventListener("click", toggleTheme, { passive: true });
 
+      document.getElementById("menu-toggle").addEventListener(
+        "click",
+        () => {
+          document.querySelector("aside").classList.toggle("is-open");
+        },
+        { passive: true }
+      );
+
       document.querySelectorAll(".menu-title").forEach((title) => {
         title.addEventListener("click", function () {
           this.parentNode.classList.toggle("is-active");
