@@ -5,6 +5,20 @@ window.addEventListener("DOMContentLoaded", () => {
     })
     .then((data) => {
       document.getElementById("menu").innerHTML = data;
+
+      document.getElementById("menu-toggle").addEventListener(
+        "click",
+        () => {
+          document.querySelector("aside").classList.toggle("is-open");
+        },
+        { passive: true }
+      );
+
+      document.querySelectorAll(".menu-title").forEach((title) => {
+        title.addEventListener("click", function () {
+          this.parentNode.classList.toggle("is-active");
+        });
+      });
     });
 
   fetch("./layout/header.html")
@@ -25,20 +39,6 @@ window.addEventListener("DOMContentLoaded", () => {
       document
         .getElementById("theme-toggle")
         .addEventListener("click", toggleTheme, { passive: true });
-
-      document.getElementById("menu-toggle").addEventListener(
-        "click",
-        () => {
-          document.querySelector("aside").classList.toggle("is-open");
-        },
-        { passive: true }
-      );
-
-      document.querySelectorAll(".menu-title").forEach((title) => {
-        title.addEventListener("click", function () {
-          this.parentNode.classList.toggle("is-active");
-        });
-      });
     });
 
   const storagedTheme = localStorage.getItem("theme");
