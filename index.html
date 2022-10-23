@@ -9,22 +9,25 @@
     <script src="./js/master.css.js"></script>
     <script src="./js/app.js"></script>
   </head>
-  <body class="p:10 bg:white bg:fade-18@dark">
-    <main class="flex@sm">
+  <body class="bg:white bg:fade-18@dark">
+    <main>
       <aside
         id="menu"
-        class="rel w:220 {fixed;top:0;left:0;z:999;w:240;p:10;bg:white;translateX(-100%);~transform|.3s}@<sm bg:fade-18@<=sm@dark translateX(0).is-open"
+        class="fixed top:0 left:0 z:999 w:240 p:10 bg:white bg:fade-18@dark translateX(-100%) translateX(0)@sm ~transform|.3s translateX(0).is-open"
       ></aside>
 
-      <article class="{w:calc(100%-230px);ml:10}@sm">
-        <header id="header" class="flex gap:10"></header>
+      <article class="{w:calc(100%-230px);ml:auto}@sm">
+        <header
+          id="header"
+          class="sticky top:0 left:0 z:998 flex gap:10 p:10 bg:white bg:fade-18@dark"
+        ></header>
 
-        <section
-          class="h:calc(100vh-90px) p:40 mt:10 overflow-y:auto bg:fade-90 bg:fade-24@dark r:8 {w:4;rounded}::scrollbar bg:fade-84::scrollbar-thumb bg:fade-40::scrollbar-thumb@dark rounded::scrollbar-thumb"
-        >
+        <section class="p:0|10|10">
           <div
-            class="overflow-x:auto {h:4;rounded}::scrollbar bg:fade-84::scrollbar-thumb bg:fade-40::scrollbar-thumb@dark rounded::scrollbar-thumb"
-          ></div>
+            class="min-h:calc(100vh-90px) p:40 bg:fade-90 bg:fade-24@dark r:8"
+          >
+            <!-- 內容放置區 -->
+          </div>
         </section>
       </article>
     </main>
