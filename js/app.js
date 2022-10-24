@@ -1,4 +1,8 @@
 window.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    document.body.classList.add("is-loaded");
+  }, 1000);
+
   fetch("./layout/menu.html")
     .then((res) => {
       return res.text();
