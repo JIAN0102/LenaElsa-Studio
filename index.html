@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,7 +13,7 @@
     <main>
       <aside
         id="menu"
-        class="fixed top:0 left:0 z:999 w:240 p:10 bg:white bg:fade-18@dark translateX(-100%) translateX(0)@sm ~transform|.3s translateX(0).is-open"
+        class="fixed top:0 left:0 z:999 w:full w:240@sm h:full p:10|10|80 p:10@sm bg:white bg:fade-18@dark translateY(100%) translateY(0)@sm ~transform|.4s translateY(0).is-open"
       ></aside>
 
       <article class="{w:calc(100%-230px);ml:auto}@sm">
@@ -27,7 +27,7 @@
             class="rel min-h:calc(100vh-90px) overflow:hidden bg:fade-90 bg:fade-24@dark r:8"
           >
             <img
-              class="abs top:0 left:0 full obj:cover opacity:.4"
+              class="abs top:0 left:0 full obj:cover opacity:.5"
               src="./img/home/banner.jpg"
               alt=""
             />
@@ -42,36 +42,56 @@
                 class="abs top:0 left:calc(75%-5px) hide block@md w:10 h:full bg:white bg:fade-18@dark"
               ></div>
               <div
-                class="abs top:65% left:0 w:50% w:25%@md h:10 bg:white bg:fade-18@dark"
+                class="abs bottom:30% left:0 w:50% w:25%@md h:10 bg:white bg:fade-18@dark"
               ></div>
               <div
-                class="abs top:35% left:50% left:25%@md w:50% w:25%@md h:10 bg:white bg:fade-18@dark"
+                class="abs top:30% left:50% left:25%@md w:50% w:25%@md h:10 bg:white bg:fade-18@dark"
               ></div>
               <div
-                class="abs top:65% left:50% hide block@md w:25% h:10 bg:white bg:fade-18@dark"
+                class="abs bottom:30% left:50% hide block@md w:25% h:10 bg:white bg:fade-18@dark"
               ></div>
               <div
-                class="abs top:35% left:75% hide block@md w:25% h:10 bg:white bg:fade-18@dark"
+                class="abs top:30% left:75% hide block@md w:25% h:10 bg:white bg:fade-18@dark"
               ></div>
             </div>
             <div
-              class="abs top:0 left:0 full bg:linear-gradient(to|top,white/.5,transparent) bg:linear-gradient(to|top,fade-18/.75,transparent)@dark"
+              class="abs top:0 left:0 full bg:linear-gradient(to|top,white/.75,transparent) bg:linear-gradient(to|top,fade-18/.75,transparent)@dark"
             ></div>
             <div
-              class="abs top:1/2 left:1/2 w:full p:30 p:40@sm mt:-40 translate(-50%,-50%)"
+              class="abs top:1/2 left:1/2 w:full px:30 px:40@sm mt:-40 translate(-50%,-50%)"
             >
               <img
-                class="w:420 m:0|auto"
+                class="w:240 w:320@sm w:420@md m:0|auto"
                 src="./img/logo/lenaelse-studio-logo-brand.svg"
                 alt="鶴姬重工 LenaElse Studio"
               />
-              <h2 class="mt:20 f:fade-42 f:white@dark t:center f:20@sm">
+              <h2 class="mt:20 f:fade-42 f:white@dark f:20@sm t:center">
                 專放一些雜七雜八的遊戲資料，希望可以提供給大家更完善的資料查詢環境。
               </h2>
             </div>
           </div>
         </section>
       </article>
+
+      <button
+        id="menu-toggle"
+        class="fixed bottom:10 left:1/2 z:999 flex hide@sm center-content w:180 h:60 px:20 bg:linear-gradient(135deg,#618bfb,#ff56b4) r:8 translateX(-50%) ~width|.4s w:calc(100%-20px).is-active"
+        type="button"
+      >
+        <span class="f:14 f:white .is-active_{hide}">展開選單</span>
+        <span class="hide f:14 f:white .is-active_{block}">關閉選單</span>
+        <div class="rel w:20 h:30 ml:10 .is-active_{ml:auto}">
+          <span
+            class="abs top:-8 right:0 bottom:0 left:0 w:10 h:1 m:auto bg:white .is-active_{top:0;rotate(45deg)}"
+          ></span>
+          <span
+            class="abs top:0 right:0 bottom:0 left:0 w:10 h:1 m:auto bg:white .is-active_{opacity:0}"
+          ></span>
+          <span
+            class="abs top:8 right:0 bottom:0 left:0 w:10 h:1 m:auto bg:white .is-active_{top:0;rotate(-45deg)}"
+          ></span>
+        </div>
+      </button>
     </main>
   </body>
 </html>
