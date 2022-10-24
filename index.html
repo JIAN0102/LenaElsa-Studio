@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>鶴姬重工┃Taiwan Games DataBase</title>
     <link href="./css/normal.css" rel="stylesheet" />
+    <style>
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
     <script src="./js/master.css.js"></script>
     <script src="./js/app.js"></script>
   </head>
@@ -31,7 +41,7 @@
               src="./img/home/banner.jpg"
               alt=""
             />
-            <div class="abs top:0 left:0 full">
+            <div class="abs inset:0">
               <div
                 class="abs top:0 left:calc(50%-5px) left:calc(25%-5px)@md w:10 h:full bg:white bg:fade-18@dark"
               ></div>
@@ -55,7 +65,7 @@
               ></div>
             </div>
             <div
-              class="abs top:0 left:0 full bg:linear-gradient(to|top,white/.75,transparent) bg:linear-gradient(to|top,fade-18/.75,transparent)@dark"
+              class="abs inset:0 bg:linear-gradient(to|top,white/.5,transparent) bg:linear-gradient(to|top,fade-18/.75,transparent)@dark"
             ></div>
             <div
               class="abs top:1/2 left:1/2 w:full px:30 px:40@sm mt:-40 translate(-50%,-50%)"
@@ -65,7 +75,7 @@
                 src="./img/logo/lenaelse-studio-logo-brand.svg"
                 alt="鶴姬重工 LenaElse Studio"
               />
-              <h2 class="mt:20 f:fade-42 f:white@dark f:20@sm t:center">
+              <h2 class="mt:10 f:fade-42 f:white@dark f:20@sm lh:1.75 t:center">
                 專放一些雜七雜八的遊戲資料，希望可以提供給大家更完善的資料查詢環境。
               </h2>
             </div>
@@ -75,12 +85,12 @@
 
       <button
         id="menu-toggle"
-        class="fixed bottom:10 left:1/2 z:999 flex hide@sm center-content w:180 h:60 px:20 bg:linear-gradient(135deg,#618bfb,#ff56b4) r:8 translateX(-50%) ~width|.4s w:calc(100%-20px).is-active"
+        class="fixed bottom:10 left:1/2 z:1000 flex hide@sm center-content w:180 h:60 px:20 bg:linear-gradient(135deg,#618bfb,#ff56b4) r:8 translateX(-50%) ~width|.4s w:calc(100%-20px).is-active"
         type="button"
       >
         <span class="f:14 f:white .is-active_{hide}">展開選單</span>
         <span class="hide f:14 f:white .is-active_{block}">關閉選單</span>
-        <div class="rel w:20 h:30 ml:10 .is-active_{ml:auto}">
+        <div class="rel w:20 h:30 ml:4 .is-active_{ml:auto}">
           <span
             class="abs top:-8 right:0 bottom:0 left:0 w:10 h:1 m:auto bg:white .is-active_{top:0;rotate(45deg)}"
           ></span>
